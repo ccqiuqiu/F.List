@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_todo"
+            android:icon="@drawable/ic_menu_todo"
+            android:checked="true"
+            android:title="@string/drawer_menu_todo" />
+        <item
+            android:id="@+id/nav_note"
+            android:icon="@drawable/ic_menu_note"
+            android:title="@string/drawer_menu_note" />
+        <item
+            android:id="@+id/nav_passnote"
+            android:icon="@drawable/ic_nav_key"
+            android:title="@string/drawer_menu_passnote" />
+    </group>
+
+    <item android:title="@string/drawer_menu_more">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/drawer_menu_share" />
+            <item
+                android:id="@+id/nav_donate"
+                android:icon="@drawable/ic_payment_black_24dp"
+                android:title="@string/drawer_menu_donate" />
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_menu_setting"
+                android:title="@string/drawer_menu_setting" />
+        </menu>
+    </item>
+
+</menu>

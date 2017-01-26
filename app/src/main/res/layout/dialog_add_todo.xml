@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/met_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:met_maxCharacters="60"
+        android:maxLength="60"
+        app:met_hideUnderline="true"
+        app:met_clearButton="true"
+        app:met_floatingLabel="normal"
+        android:hint="@string/todo_hint"/>
+
+    <RadioGroup android:id="@+id/rg_priority"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/rb_priority_0"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@drawable/radio_selector_0"
+            android:text="@string/priority_0"
+            />
+        <RadioButton android:id="@+id/rb_priority_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@drawable/radio_selector_1"
+            android:text="@string/priority_1"
+            android:layout_marginLeft="@dimen/drawable_padding"
+            android:layout_marginRight="@dimen/drawable_padding"
+            />
+        <RadioButton android:id="@+id/rb_priority_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@drawable/radio_selector_2"
+            android:text="@string/priority_2"
+            />
+    </RadioGroup>
+</LinearLayout>

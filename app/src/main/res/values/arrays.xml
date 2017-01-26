@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category">
+        <item>@string/drawer_menu_todo</item>
+        <item>@string/drawer_menu_note</item>
+        <item>@string/drawer_menu_passnote</item>
+        <item>@string/last_location</item>
+    </string-array>
+
+    <string-array name="tips_todo_0">
+        <item>太好了！\n所有任务已经完成。</item>
+        <item>想要做什么？\n轻按 + 开始安排任务吧。</item>
+        <item>这里空空如也！\n没有想要做的事情吗？</item>
+    </string-array>
+
+    <string-array name="tips_todo_1">
+        <item>右滑正在进行的任务到这里。\n左滑这里的条目重新开始任务。</item>
+        <item>点击任务以修改待办 \n长按任务以删除。</item>
+        <item>任务太多太杂乱？\n及时清理已完成的任务吧。</item>
+    </string-array>
+
+    <string-array name="tips_note">
+        <item>好记性不如烂笔头，\n有什么需要记住的全部交给我吧。</item>
+        <item>备忘太多不好找？\n拖动条目前面的图标可以排序哦。</item>
+        <item>需要经常查看某个备忘？\n试试左滑条目看看。</item>
+        <item>右滑以删除。\n长按可以编辑备忘。</item>
+    </string-array>
+    <string-array name="tips_passnote">
+        <item>三重安全保护
+            \n本APP不联网，你的数据不会被发送给任何人
+            \n数据库加密存储，即使拿到数据库也不能看到真实数据
+            \n源代码加密，即使APP被反编译也看不到真实代码</item>
+    </string-array>
+    <string-array name="pass_flg">
+        <item>@string/sett_pass_content_0</item>
+        <item>@string/sett_pass_content_1</item>
+        <!--<item>@string/sett_pass_content_2</item>-->
+    </string-array>
+</resources>

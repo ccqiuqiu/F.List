@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.ccqiuqiu.flist.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <View
+            android:id="@+id/toolbar_top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--搜索相关的view-->
+    <View
+        android:id="@+id/view_search_tint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.0"
+        android:background="#88000000"
+        android:elevation="2dp"
+        android:layerType="hardware"
+        android:visibility="gone" />
+    <org.cryse.widget.persistentsearch.PersistentSearchView
+        android:id="@+id/searchview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:elevation="4dp"
+        android:visibility="gone"
+        app:persistentSV_customToolbarHeight="56dp"
+        app:persistentSV_displayMode="menuItem"
+        app:persistentSV_editHintText="@string/search"
+        app:persistentSV_editHintTextColor="#50000000"
+        app:persistentSV_editTextColor="#21252a"
+        app:persistentSV_homeButtonMode="burger"
+        app:persistentSV_searchCardElevation="2dp"
+        app:persistentSV_searchTextColor="#21252a" />
+
+
+    <include layout="@layout/content_main" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_black_24dp" />
+
+    <LinearLayout
+        android:id="@+id/view_password"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="#FFFFFFFF"
+        android:elevation="10dp"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_lock_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/set_pass_f"
+            android:textSize="16sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingBottom="20dp"
+            android:layout_weight="1">
+
+            <com.takwolf.android.lock9.Lock9View
+                android:id="@+id/lock_9_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:lock9_autoLink="false"
+                app:lock9_enableVibrate="true"
+                app:lock9_lineColor="#FF009688"
+                app:lock9_lineWidth="8dp"
+                app:lock9_nodeAreaExpand="20dp"
+                app:lock9_nodeOnAnim="@anim/node_on_2"
+                app:lock9_nodeOnSrc="@drawable/shape_point_lock"
+                app:lock9_nodeSize="26dp"
+                app:lock9_nodeSrc="@drawable/shape_point_no"
+                app:lock9_padding="0dp"
+                app:lock9_vibrateTime="20" />
+        </FrameLayout>
+
+
+        <Button
+            android:id="@+id/tv_lock_title_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#FFFFFFFF"
+            android:background="@drawable/btn_selector_edit"
+            android:text="@string/change_pass" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

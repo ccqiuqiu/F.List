@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/commonListItemStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:met_hideUnderline="true"
+        android:maxLength="16"
+        android:hint="@string/cate_content_hint"/>
+
+    <Button
+        android:id="@+id/btn_edit"
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:textColor="@color/bg_swipe_item_neutral"
+        android:backgroundTint="@color/bg_swipe_item_pinned"
+        android:text="@string/edit" />
+
+    <Button
+        android:id="@+id/btn_del"
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/bg_swipe_item_neutral"
+        android:backgroundTint="@color/bg_swipe_item_del"
+        android:text="@string/delete" />
+
+</LinearLayout>
