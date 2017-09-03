@@ -516,7 +516,7 @@ public class PassNoteFragment extends BaseFragment {
                 layout_desc.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        ViewUtils.copyToClipboard(getContext(), passNote.getDesc());
+                        ViewUtils.copyToClipboard(getContext(), AESUtils.decode(passNote.getDesc(), App.key));
                         ViewUtils.toast(getString(R.string.desc) + getString(R.string.copyed));
                     }
                 });
@@ -526,14 +526,14 @@ public class PassNoteFragment extends BaseFragment {
             layout_username.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ViewUtils.copyToClipboard(getContext(), passNote.getUserName());
+                    ViewUtils.copyToClipboard(getContext(), AESUtils.decode(passNote.getUserName(), App.key));
                     ViewUtils.toast(getString(R.string.username) + getString(R.string.copyed));
                 }
             });
             layout_password.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ViewUtils.copyToClipboard(getContext(), passNote.getPassWord());
+                    ViewUtils.copyToClipboard(getContext(), AESUtils.decode(passNote.getPassWord(), App.key));
                     ViewUtils.toast(getString(R.string.password) + getString(R.string.copyed));
                 }
             });
